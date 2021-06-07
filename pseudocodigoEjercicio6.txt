@@ -1,0 +1,35 @@
+Inicio pseudocodigoEjercicio6
+
+	Arreglo personas[100]
+	Variable edad
+	Variable i
+	Variable edadMayorSuma  = 0
+	Variable edadMayorVeces = 0
+	Variable edadMenorSuma  = 0
+	Variable edadMenorVeces = 0
+	Variable edadMayorPromedio
+	Variable edadMenorPromedio
+	
+	Desde i=0; hasta i<100; aumentar i = i+1
+		Escribir (i+1)". Ingrese su edad: "
+		Leer edad
+		
+		persona[i].establecerEdad(edad)
+			
+		Si (persona[i].obtenerEdad >= 25) hacer
+			edadMayorSuma = edadMayorSuma + persona[i].obtenerEdad
+			edadMayorVeces = edadMayorVeces + 1
+		FinSi
+		Sino (persona[i].obtenerEdad < 25) hacer
+			edadMenorSuma = edadMenorSuma + persona[i].obtenerEdad
+			edadMenorVeces = edadMenorVeces + 1
+		FinSino
+	FinDesde
+	
+	edadMayorPromedio = edadMayorSuma / edadMayorVeces
+	edadMenorPromedio = edadMenorSuma / edadMenorVeces
+	
+	Escribir "El promedio entre las personas mayores o iguales a 25 es: " edadMayorPromedio
+	Escribir "El promedio entre las personas menores a 25 es: " edadMenorPromedio
+	
+Fin
